@@ -1,7 +1,7 @@
 ## Sobre CRLibre
 Somos una comunidad de individuos y organizaciones que voluntariamente unimos esfuerzos para colaborar y compartir conocimiento, crear software libre para resolver problemas que enfrentamos en nuestra realidad en Costa Rica.
 
-En nuestros repositorios estamos creando componentes de software y documentacin para simplificar el proceso de la **Factura Electrónica** requerido por el Ministerio de Hacienda de Costa Rica.
+En nuestros repositorios estamos creando componentes de software y documentación para simplificar el proceso de la **Factura Electrónica** requerido por el Ministerio de Hacienda de Costa Rica.
 
 ## Cómo colaborar con el API Open Source de CRLibre
 * Abriendo un *issue* en un repositorio en https://github.com/CRLibre
