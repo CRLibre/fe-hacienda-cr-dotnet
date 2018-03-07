@@ -41,5 +41,25 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="XSD\4.2\FacturaElectronica.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XSD\4.2\MensajeHacienda.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XSD\4.2\MensajeReceptor.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XSD\4.2\NotaCreditoElectronica.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XSD\4.2\NotaDebitoElectronica.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XSD\4.2\TiqueteElectronico.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
