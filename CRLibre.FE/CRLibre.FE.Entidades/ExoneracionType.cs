@@ -12,7 +12,7 @@ namespace CRLibre.FE.Entidades
         String nombreInstitucion;
         DateTime fechaEmision;
         DecimalDineroType montoImpuesto;
-        Int32 PorcentajeCompra;
+        Int32 porcentajeCompra;
 
         /// <summary>
         /// Tipo de documento de exoneración o autorización. 
@@ -49,8 +49,9 @@ namespace CRLibre.FE.Entidades
         public DecimalDineroType MontoImpuesto { get => montoImpuesto; set => montoImpuesto = value; }
 
         /// <summary>
-        /// 
+        /// Porcentaje de la compra autorizada o exonerada
+        ///  <remarks>3 caracteres máximo</remarks>
         /// </summary>
-        public int PorcentajeCompra1 { get => PorcentajeCompra; set => PorcentajeCompra = value; }
+        public int PorcentajeCompra { get => porcentajeCompra; set => porcentajeCompra = value; }
     }
 }
