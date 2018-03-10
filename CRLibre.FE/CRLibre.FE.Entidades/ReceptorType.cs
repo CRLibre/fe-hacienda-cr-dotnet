@@ -2,71 +2,135 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 
 namespace CRLibre.FE.Entidades
 {
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.7.2558.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/facturaElectronica")]
     public class ReceptorType
     {
-        String nombre;
-        IdentificacionType identificacion;
-        String identificacionExtranjero;
-        String nombreComercial;
-        UbicacionType ubicacion;
-        TelefonoType telefono;
-        TelefonoType fax;
-        String correoElectronico;
 
-        /// <summary>
-        /// Nombre o razon social
-        /// [REQUERIDO]
-        /// <remarks>80 caracteres máximo</remarks>
-        /// </summary>
-        public string Nombre { get => nombre; set => nombre = value; }
-        public IdentificacionType Identificacion { get => identificacion; set => identificacion = value; }
+        private string nombreField;
 
-        /// <summary>
-        /// Este campo será de condición obligatoria, cuando el cliente lo requiera
-        /// <remarks>20 caracteres máximo</remarks>
-        /// </summary>
-        public string IdentificacionExtranjero { get => identificacionExtranjero; set => identificacionExtranjero = value; }
+        private IdentificacionType identificacionField;
 
-        /// <summary>
-        /// En caso de que se cuente con nombre comercial debe indicarse
-        /// <remarks>80 caracteres máximo</remarks>
-        /// </summary>
-        public string NombreComercial { get => nombreComercial; set => nombreComercial = value; }
+        private string identificacionExtranjeroField;
 
-        public UbicacionType Ubicacion { get => ubicacion; set => ubicacion = value; }
+        private string nombreComercialField;
 
-        /// <summary>
-        /// No es obligatorio
-        /// </summary>
-        public TelefonoType Telefono { get => telefono; set => telefono = value; }
+        private UbicacionType ubicacionField;
 
-        /// <summary>
-        /// No es obligatorio
-        /// </summary>
-        public TelefonoType Fax { get => fax; set => fax = value; }
+        private TelefonoType telefonoField;
 
-        /// <summary>
-        /// Debe cumplir con la siguiente estructura:  \s*\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*\s*
-        /// </summary>
-        public string CorreoElectronico
+        private TelefonoType faxField;
+
+        private string correoElectronicoField;
+
+        /// <remarks/>
+        public string Nombre
         {
-            get { return correoElectronico; }
+            get
+            {
+                return this.nombreField;
+            }
             set
             {
-                Regex formatoEmail = new Regex(@"\s*\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*\s*");
+                this.nombreField = value;
+            }
+        }
 
-                if (formatoEmail.IsMatch(value))
+        /// <remarks/>
+        public IdentificacionType Identificacion
+        {
+            get
+            {
+                return this.identificacionField;
+            }
+            set
+            {
+                this.identificacionField = value;
+            }
+        }
 
-                    correoElectronico = value;
+        /// <remarks/>
+        public string IdentificacionExtranjero
+        {
+            get
+            {
+                return this.identificacionExtranjeroField;
+            }
+            set
+            {
+                this.identificacionExtranjeroField = value;
+            }
+        }
 
-                else
+        /// <remarks/>
+        public string NombreComercial
+        {
+            get
+            {
+                return this.nombreComercialField;
+            }
+            set
+            {
+                this.nombreComercialField = value;
+            }
+        }
 
-                    throw new Exception("El formato de correo no es valido, favor verificar: " + value.ToString());
+        /// <remarks/>
+        public UbicacionType Ubicacion
+        {
+            get
+            {
+                return this.ubicacionField;
+            }
+            set
+            {
+                this.ubicacionField = value;
+            }
+        }
 
+        /// <remarks/>
+        public TelefonoType Telefono
+        {
+            get
+            {
+                return this.telefonoField;
+            }
+            set
+            {
+                this.telefonoField = value;
+            }
+        }
+
+        /// <remarks/>
+        public TelefonoType Fax
+        {
+            get
+            {
+                return this.faxField;
+            }
+            set
+            {
+                this.faxField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string CorreoElectronico
+        {
+            get
+            {
+                return this.correoElectronicoField;
+            }
+            set
+            {
+                this.correoElectronicoField = value;
             }
         }
     }

@@ -39,18 +39,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Certificado.cs" />
-    <Compile Include="ClaveType.cs" />
     <Compile Include="CodigoType.cs" />
-    <Compile Include="DecimalDineroType.cs" />
     <Compile Include="EmisorType.cs" />
     <Compile Include="ExoneracionType.cs" />
-    <Compile Include="FacturaElectronica.cs" />
+    <Compile Include="FacturaElectronica.cs">
+      <SubType>code</SubType>
+      <DependentUpon>FacturaElectronica.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FacturaElectronicaCondicionVenta.cs" />
+    <Compile Include="FacturaElectronicaInformacionReferencia.cs" />
+    <Compile Include="FacturaElectronicaInformacionReferenciaCodigo.cs" />
+    <Compile Include="FacturaElectronicaInformacionReferenciaTipoDoc.cs" />
+    <Compile Include="FacturaElectronicaLineaDetalle.cs" />
+    <Compile Include="FacturaElectronicaMedioPago.cs" />
+    <Compile Include="FacturaElectronicaNormativa.cs" />
+    <Compile Include="FacturaElectronicaOtros.cs" />
+    <Compile Include="FacturaElectronicaOtrosOtroContenido.cs" />
+    <Compile Include="FacturaElectronicaOtrosOtroTexto.cs" />
+    <Compile Include="FacturaElectronicaResumenFactura.cs" />
+    <Compile Include="FacturaElectronicaResumenFacturaCodigoMoneda.cs" />
     <Compile Include="IdentificacionType.cs" />
     <Compile Include="ImpuestoType.cs" />
-    <Compile Include="LineaDetalle.cs" />
-    <Compile Include="MedioPagoType.cs" />
-    <Compile Include="NumeroConsecutivoType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReceptorType.cs" />
     <Compile Include="TelefonoType.cs" />

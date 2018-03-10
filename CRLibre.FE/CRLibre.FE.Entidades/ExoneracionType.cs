@@ -5,53 +5,136 @@ using System.Text;
 
 namespace CRLibre.FE.Entidades
 {
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.7.2558.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/facturaElectronica")]
     public class ExoneracionType
     {
-        String tipoDocumento;
-        String numeroDocumento;
-        String nombreInstitucion;
-        DateTime fechaEmision;
-        DecimalDineroType montoImpuesto;
-        Int32 porcentajeCompra;
 
-        /// <summary>
-        /// Tipo de documento de exoneración o autorización. 
-        /// 01 Compras Autorizadas, 
-        /// 02 Ventas exentas a diplomáticos, 
-        /// 03 Orden de compra (instituciones públicas y otros organismos), 
-        /// 04 Exenciones Dirección General de Hacienda, 
-        /// 05 Zonas Francas, 
-        /// 99 Otros
-        /// <remarks>2 caracteres máximo</remarks>
-        /// </summary>
-        public string TipoDocumento { get => tipoDocumento; set => tipoDocumento = value; }
+        private ExoneracionTypeTipoDocumento tipoDocumentoField;
 
-        /// <summary>
-        /// Número de documento de exoneración o autorización
-        /// <remarks>17 caracteres máximo</remarks>
-        /// </summary>
-        public string NumeroDocumento { get => numeroDocumento; set => numeroDocumento = value; }
+        private string numeroDocumentoField;
 
-        /// <summary>
-        /// Nombre de la institución o dependencia que emitió la exoneración
-        /// <remarks>100 caracteres máximo</remarks>
-        /// </summary>
-        public string NombreInstitucion { get => nombreInstitucion; set => nombreInstitucion = value; }
+        private string nombreInstitucionField;
 
-        /// <summary>
-        /// Fecha y hora de la emisión del documento de exoneración o autorización.
-        /// </summary>
-        public DateTime FechaEmision { get => fechaEmision; set => fechaEmision = value; }
+        private System.DateTime fechaEmisionField;
 
-        /// <summary>
-        /// Monto del impuesto exonerado o autorizado sin impuestos
-        /// </summary>
-        public DecimalDineroType MontoImpuesto { get => montoImpuesto; set => montoImpuesto = value; }
+        private decimal montoImpuestoField;
 
-        /// <summary>
-        /// Porcentaje de la compra autorizada o exonerada
-        ///  <remarks>3 caracteres máximo</remarks>
-        /// </summary>
-        public int PorcentajeCompra { get => porcentajeCompra; set => porcentajeCompra = value; }
+        private string porcentajeCompraField;
+
+        /// <remarks/>
+        public ExoneracionTypeTipoDocumento TipoDocumento
+        {
+            get
+            {
+                return this.tipoDocumentoField;
+            }
+            set
+            {
+                this.tipoDocumentoField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string NumeroDocumento
+        {
+            get
+            {
+                return this.numeroDocumentoField;
+            }
+            set
+            {
+                this.numeroDocumentoField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string NombreInstitucion
+        {
+            get
+            {
+                return this.nombreInstitucionField;
+            }
+            set
+            {
+                this.nombreInstitucionField = value;
+            }
+        }
+
+        /// <remarks/>
+        public System.DateTime FechaEmision
+        {
+            get
+            {
+                return this.fechaEmisionField;
+            }
+            set
+            {
+                this.fechaEmisionField = value;
+            }
+        }
+
+        /// <remarks/>
+        public decimal MontoImpuesto
+        {
+            get
+            {
+                return this.montoImpuestoField;
+            }
+            set
+            {
+                this.montoImpuestoField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "integer")]
+        public string PorcentajeCompra
+        {
+            get
+            {
+                return this.porcentajeCompraField;
+            }
+            set
+            {
+                this.porcentajeCompraField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.7.2558.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/facturaElectronica")]
+    public enum ExoneracionTypeTipoDocumento
+    {
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("01")]
+        Item01,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("02")]
+        Item02,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("03")]
+        Item03,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("04")]
+        Item04,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("05")]
+        Item05,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("99")]
+        Item99,
     }
 }

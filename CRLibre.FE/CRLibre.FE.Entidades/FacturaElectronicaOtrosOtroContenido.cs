@@ -10,39 +10,39 @@ namespace CRLibre.FE.Entidades
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/facturaElectronica")]
-    public class TelefonoType
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/facturaElectronica")]
+    public partial class FacturaElectronicaOtrosOtroContenido
     {
 
-        private string codigoPaisField;
+        private System.Xml.XmlElement anyField;
 
-        private string numTelefonoField;
+        private string codigoField;
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "integer")]
-        public string CodigoPais
+        [System.Xml.Serialization.XmlAnyElementAttribute()]
+        public System.Xml.XmlElement Any
         {
             get
             {
-                return this.codigoPaisField;
+                return this.anyField;
             }
             set
             {
-                this.codigoPaisField = value;
+                this.anyField = value;
             }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "integer")]
-        public string NumTelefono
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string codigo
         {
             get
             {
-                return this.numTelefonoField;
+                return this.codigoField;
             }
             set
             {
-                this.numTelefonoField = value;
+                this.codigoField = value;
             }
         }
     }

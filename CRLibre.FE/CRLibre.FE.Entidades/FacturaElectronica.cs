@@ -1,67 +1,171 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Xml.Serialization;
+using CRLibre.FE.Entidades;
 
-namespace CRLibre.FE.Entidades
-{
-    /// <summary>
-    /// Elemento raíz de la factura electronica
-    /// </summary>
-    public class FacturaElectronica
-    {
-        ClaveType clave;
-        NumeroConsecutivoType numeroConsecutivo;
-        DateTime fechaEmision;
-        EmisorType emisor;
-        ReceptorType receptor;
-        String condicionVenta;
-        String plazoCredito;
-        List<MedioPagoType> lstMedioPago;//puede ser de 1 a 4 repeticiones
-        String detalleServicio;
-
-        /// <summary>
-        /// Corresponde a la clave del comprobante. Es un campo de 50 posiciones y se tiene que utilizar para la consulta del código QR. Ver nota 1 y 4.1
-        /// </summary>
-        public ClaveType Clave { get => clave; set => clave = value; }
-
-        /// <summary>
-        /// Numeración consecutiva del comprobante
-        /// </summary>
-        public NumeroConsecutivoType NumeroConsecutivo { get => numeroConsecutivo; set => numeroConsecutivo = value; }
-        public DateTime FechaEmision { get => fechaEmision; set => fechaEmision = value; }
-
-        /// <summary>
-        /// Emisor del documento
-        /// </summary>
-        public EmisorType Emisor { get => emisor; set => emisor = value; }
-
-        /// <summary>
-        /// Receptor del documento [OPCIONAL]
-        /// </summary>
-        public ReceptorType Receptor { get => receptor; set => receptor = value; }
-
-        /// <summary>
-        /// Condiciones de la venta: 01 Contado, 02 Crédito, 03 Consignación, 04 Apartado, 05 Arrendamiento con opción de compra, 06 Arrendamiento en función financiera, 99 Otros
-        /// <remarks>2 caracteres máximo</remarks>
-        /// </summary>
-        public string CondicionVenta { get => condicionVenta; set => condicionVenta = value; }
-
-        /// <summary>
-        /// Plazo del crédito, es obligatorio cuando la venta del producto o prestación del servicio sea a crédito [OPCIONAL]
-        /// <remarks>10 caracteres máximo</remarks>
-        /// </summary>
-        public string PlazoCredito { get => plazoCredito; set => plazoCredito = value; }
-
-        /// <summary>
-        /// De 1 a maximo 4 repeticiones
-        /// </summary>
-        public List<MedioPagoType> LstMedioPago { get => lstMedioPago; set => lstMedioPago = value; }
-
-        /// <summary>
-        /// Detalle de la mercancia o servicio prestado.
-        /// </summary>
-        public string DetalleServicio { get => detalleServicio; set => detalleServicio = value; }
-        
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.7.2558.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/facturaElectronica")]
+[System.Xml.Serialization.XmlRootAttribute(Namespace="https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/facturaElectronica", IsNullable=false)]
+public partial class FacturaElectronica {
+    
+    private string claveField;
+    
+    private string numeroConsecutivoField;
+    
+    private System.DateTime fechaEmisionField;
+    
+    private EmisorType emisorField;
+    
+    private ReceptorType receptorField;
+    
+    private FacturaElectronicaCondicionVenta condicionVentaField;
+    
+    private string plazoCreditoField;
+    
+    private FacturaElectronicaMedioPago[] medioPagoField;
+    
+    private FacturaElectronicaLineaDetalle[] detalleServicioField;
+    
+    private FacturaElectronicaResumenFactura resumenFacturaField;
+    
+    private FacturaElectronicaInformacionReferencia[] informacionReferenciaField;
+    
+    private FacturaElectronicaNormativa normativaField;
+    
+    private FacturaElectronicaOtros otrosField;
+    
+    /// <remarks/>
+    public string Clave {
+        get {
+            return this.claveField;
+        }
+        set {
+            this.claveField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public string NumeroConsecutivo {
+        get {
+            return this.numeroConsecutivoField;
+        }
+        set {
+            this.numeroConsecutivoField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public System.DateTime FechaEmision {
+        get {
+            return this.fechaEmisionField;
+        }
+        set {
+            this.fechaEmisionField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public EmisorType Emisor {
+        get {
+            return this.emisorField;
+        }
+        set {
+            this.emisorField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public ReceptorType Receptor {
+        get {
+            return this.receptorField;
+        }
+        set {
+            this.receptorField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public FacturaElectronicaCondicionVenta CondicionVenta {
+        get {
+            return this.condicionVentaField;
+        }
+        set {
+            this.condicionVentaField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public string PlazoCredito {
+        get {
+            return this.plazoCreditoField;
+        }
+        set {
+            this.plazoCreditoField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlElementAttribute("MedioPago")]
+    public FacturaElectronicaMedioPago[] MedioPago {
+        get {
+            return this.medioPagoField;
+        }
+        set {
+            this.medioPagoField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlArrayItemAttribute("LineaDetalle", IsNullable=false)]
+    public FacturaElectronicaLineaDetalle[] DetalleServicio {
+        get {
+            return this.detalleServicioField;
+        }
+        set {
+            this.detalleServicioField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public FacturaElectronicaResumenFactura ResumenFactura {
+        get {
+            return this.resumenFacturaField;
+        }
+        set {
+            this.resumenFacturaField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlElementAttribute("InformacionReferencia")]
+    public FacturaElectronicaInformacionReferencia[] InformacionReferencia {
+        get {
+            return this.informacionReferenciaField;
+        }
+        set {
+            this.informacionReferenciaField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public FacturaElectronicaNormativa Normativa {
+        get {
+            return this.normativaField;
+        }
+        set {
+            this.normativaField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public FacturaElectronicaOtros Otros {
+        get {
+            return this.otrosField;
+        }
+        set {
+            this.otrosField = value;
+        }
     }
 }

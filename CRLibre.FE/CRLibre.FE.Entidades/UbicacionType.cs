@@ -5,36 +5,88 @@ using System.Text;
 
 namespace CRLibre.FE.Entidades
 {
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.7.2558.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/facturaElectronica")]
     public class UbicacionType
     {
-        String provincia;
-        String canton;
-        String distrito;
-        String barrio;
-        String otrasSenas;
 
-        /// <summary>
-        /// <remarks>160 caracteres máximo</remarks>
-        /// </summary>
-        public string OtrasSenas { get => otrasSenas; set => otrasSenas = value; }
-        /// <summary>
-        /// <remarks>2 caracteres máximo</remarks>
-        /// </summary>
-        public string Barrio { get => barrio; set => barrio = value; }
+        private string provinciaField;
 
-        /// <summary>
-        /// <remarks>2 caracteres máximo</remarks>
-        /// </summary>
-        public string Distrito { get => distrito; set => distrito = value; }
+        private string cantonField;
 
-        /// <summary>
-        /// <remarks>2 caracteres máximo</remarks>
-        /// </summary>
-        public string Canton { get => canton; set => canton = value; }
+        private string distritoField;
 
-        /// <summary>
-        /// <remarks>2 caracteres máximo</remarks>
-        /// </summary>
-        public string Provincia { get => provincia; set => provincia = value; }
+        private string barrioField;
+
+        private string otrasSenasField;
+
+        /// <remarks/>
+        public string Provincia
+        {
+            get
+            {
+                return this.provinciaField;
+            }
+            set
+            {
+                this.provinciaField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Canton
+        {
+            get
+            {
+                return this.cantonField;
+            }
+            set
+            {
+                this.cantonField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Distrito
+        {
+            get
+            {
+                return this.distritoField;
+            }
+            set
+            {
+                this.distritoField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Barrio
+        {
+            get
+            {
+                return this.barrioField;
+            }
+            set
+            {
+                this.barrioField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string OtrasSenas
+        {
+            get
+            {
+                return this.otrasSenasField;
+            }
+            set
+            {
+                this.otrasSenasField = value;
+            }
+        }
     }
 }

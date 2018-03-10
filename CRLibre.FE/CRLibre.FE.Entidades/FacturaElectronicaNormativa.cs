@@ -10,40 +10,39 @@ namespace CRLibre.FE.Entidades
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/facturaElectronica")]
-    public class TelefonoType
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/facturaElectronica")]
+    public class FacturaElectronicaNormativa
     {
 
-        private string codigoPaisField;
+        private string numeroResolucionField;
 
-        private string numTelefonoField;
+        private string fechaResolucionField;
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "integer")]
-        public string CodigoPais
+        public string NumeroResolucion
         {
             get
             {
-                return this.codigoPaisField;
+                return this.numeroResolucionField;
             }
             set
             {
-                this.codigoPaisField = value;
+                this.numeroResolucionField = value;
             }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "integer")]
-        public string NumTelefono
+        public string FechaResolucion
         {
             get
             {
-                return this.numTelefonoField;
+                return this.fechaResolucionField;
             }
             set
             {
-                this.numTelefonoField = value;
+                this.fechaResolucionField = value;
             }
         }
     }
+
 }

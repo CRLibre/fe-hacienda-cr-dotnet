@@ -2,69 +2,124 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 
 namespace CRLibre.FE.Entidades
 {
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.7.2558.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/facturaElectronica")]
     public class EmisorType
     {
-        String nombre;
-        IdentificacionType identificacion;
-        String nombreComercial;
-        UbicacionType ubicacion;
-        TelefonoType telefono;
-        TelefonoType fax;
-        String correoElectronico;
 
+        private string nombreField;
 
-        /// <summary>
-        /// Nombre o razon social [REQUERIDO]
-        /// <remarks>80 caracteres máximo</remarks>
-        /// </summary>
-        public string Nombre { get => nombre.Substring(0, 80); set => nombre = value; }
+        private IdentificacionType identificacionField;
 
-        public IdentificacionType Identificacion { get => identificacion; set => identificacion = value; }
+        private string nombreComercialField;
 
-        /// <summary>
-        /// En caso de que se cuente con nombre comercial debe indicarse
-        /// <remarks>80 caracteres máximo</remarks>  
-        /// </summary>
-        public string NombreComercial { get => nombreComercial.Substring(0, 80); set => nombreComercial = value; }
+        private UbicacionType ubicacionField;
 
+        private TelefonoType telefonoField;
 
-        public UbicacionType Ubicacion { get => ubicacion; set => ubicacion = value; }
+        private TelefonoType faxField;
 
-        /// <summary>
-        /// No es obligatorio
-        /// </summary>
-        public TelefonoType Telefono { get => telefono; set => telefono = value; }
+        private string correoElectronicoField;
 
-        /// <summary>
-        /// No es obligatorio
-        /// </summary>
-        public TelefonoType Fax { get => fax; set => fax = value; }
-
-        /// <summary>
-        /// Debe cumplir con la siguiente estructura:  \s*\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*\s*
-        /// </summary>
-        public string CorreoElectronico
+        /// <remarks/>
+        public string Nombre
         {
-            /*get => correoElectronico;
-            set => correoElectronico = value; }*/
-            get { return correoElectronico; }
+            get
+            {
+                return this.nombreField;
+            }
             set
             {
-                Regex formatoEmail = new Regex(@"\s*\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*\s*");
+                this.nombreField = value;
+            }
+        }
 
-                if (formatoEmail.IsMatch(value))
+        /// <remarks/>
+        public IdentificacionType Identificacion
+        {
+            get
+            {
+                return this.identificacionField;
+            }
+            set
+            {
+                this.identificacionField = value;
+            }
+        }
 
-                    correoElectronico = value;
+        /// <remarks/>
+        public string NombreComercial
+        {
+            get
+            {
+                return this.nombreComercialField;
+            }
+            set
+            {
+                this.nombreComercialField = value;
+            }
+        }
 
-                else
+        /// <remarks/>
+        public UbicacionType Ubicacion
+        {
+            get
+            {
+                return this.ubicacionField;
+            }
+            set
+            {
+                this.ubicacionField = value;
+            }
+        }
 
-                    throw new Exception("El formato de correo no es valido, favor verificar: " + value.ToString());
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable = true)]
+        public TelefonoType Telefono
+        {
+            get
+            {
+                return this.telefonoField;
+            }
+            set
+            {
+                this.telefonoField = value;
+            }
+        }
 
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable = true)]
+        public TelefonoType Fax
+        {
+            get
+            {
+                return this.faxField;
+            }
+            set
+            {
+                this.faxField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string CorreoElectronico
+        {
+            get
+            {
+                return this.correoElectronicoField;
+            }
+            set
+            {
+                this.correoElectronicoField = value;
             }
         }
     }
+
 }
