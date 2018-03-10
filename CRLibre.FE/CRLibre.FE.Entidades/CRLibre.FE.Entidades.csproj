@@ -42,22 +42,21 @@
     <Compile Include="CodigoType.cs" />
     <Compile Include="EmisorType.cs" />
     <Compile Include="ExoneracionType.cs" />
-    <Compile Include="FacturaElectronica.cs">
+    <Compile Include="FacturaElectronica\FacturaElectronica.cs">
       <SubType>code</SubType>
-      <DependentUpon>FacturaElectronica.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FacturaElectronicaCondicionVenta.cs" />
-    <Compile Include="FacturaElectronicaInformacionReferencia.cs" />
-    <Compile Include="FacturaElectronicaInformacionReferenciaCodigo.cs" />
-    <Compile Include="FacturaElectronicaInformacionReferenciaTipoDoc.cs" />
-    <Compile Include="FacturaElectronicaLineaDetalle.cs" />
-    <Compile Include="FacturaElectronicaMedioPago.cs" />
-    <Compile Include="FacturaElectronicaNormativa.cs" />
-    <Compile Include="FacturaElectronicaOtros.cs" />
-    <Compile Include="FacturaElectronicaOtrosOtroContenido.cs" />
-    <Compile Include="FacturaElectronicaOtrosOtroTexto.cs" />
-    <Compile Include="FacturaElectronicaResumenFactura.cs" />
-    <Compile Include="FacturaElectronicaResumenFacturaCodigoMoneda.cs" />
+    <Compile Include="FacturaElectronica\FacturaElectronicaCondicionVenta.cs" />
+    <Compile Include="FacturaElectronica\FacturaElectronicaInformacionReferencia.cs" />
+    <Compile Include="FacturaElectronica\FacturaElectronicaInformacionReferenciaCodigo.cs" />
+    <Compile Include="FacturaElectronica\FacturaElectronicaInformacionReferenciaTipoDoc.cs" />
+    <Compile Include="FacturaElectronica\FacturaElectronicaLineaDetalle.cs" />
+    <Compile Include="FacturaElectronica\FacturaElectronicaMedioPago.cs" />
+    <Compile Include="FacturaElectronica\FacturaElectronicaNormativa.cs" />
+    <Compile Include="FacturaElectronica\FacturaElectronicaOtros.cs" />
+    <Compile Include="FacturaElectronica\FacturaElectronicaOtrosOtroContenido.cs" />
+    <Compile Include="FacturaElectronica\FacturaElectronicaOtrosOtroTexto.cs" />
+    <Compile Include="FacturaElectronica\FacturaElectronicaResumenFactura.cs" />
+    <Compile Include="FacturaElectronica\FacturaElectronicaResumenFacturaCodigoMoneda.cs" />
     <Compile Include="IdentificacionType.cs" />
     <Compile Include="ImpuestoType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
