@@ -5,7 +5,9 @@ using System.Text;
 
 namespace CRLibre.FE.Entidades
 {
-    /// <remarks/>
+    /// <summary>
+    /// Cada línea del detalle de la mercancia o servicio prestado.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.7.2558.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]

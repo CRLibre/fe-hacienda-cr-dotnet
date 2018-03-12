@@ -14,6 +14,8 @@ namespace CRLibre.FE.Entidades
     public class UbicacionType
     {
 
+        #region Variables
+
         private string provinciaField;
 
         private string cantonField;
@@ -24,7 +26,14 @@ namespace CRLibre.FE.Entidades
 
         private string otrasSenasField;
 
-        /// <remarks/>
+        #endregion
+
+        #region Metodos
+
+        /// <summary>
+        /// Provincia | un digito
+        ///  | [REQUERIDO]
+        /// </summary>
         public string Provincia
         {
             get
@@ -37,7 +46,10 @@ namespace CRLibre.FE.Entidades
             }
         }
 
-        /// <remarks/>
+        /// <summary>
+        /// Canton | dos digitos
+        ///  | [REQUERIDO]
+        /// </summary>
         public string Canton
         {
             get
@@ -50,7 +62,10 @@ namespace CRLibre.FE.Entidades
             }
         }
 
-        /// <remarks/>
+        /// <summary>
+        /// Distrito | tres digitos
+        ///  | [REQUERIDO]
+        /// </summary>
         public string Distrito
         {
             get
@@ -63,7 +78,10 @@ namespace CRLibre.FE.Entidades
             }
         }
 
-        /// <remarks/>
+        /// <summary>
+        /// Barrio | dos digitos
+        ///  | [OPCIONAL]
+        /// </summary>
         public string Barrio
         {
             get
@@ -76,7 +94,10 @@ namespace CRLibre.FE.Entidades
             }
         }
 
-        /// <remarks/>
+        /// <summary>
+        /// Otras señas | 160 caracteres máximo
+        ///  | [REQUERIDO]
+        /// </summary>
         public string OtrasSenas
         {
             get
@@ -88,5 +109,7 @@ namespace CRLibre.FE.Entidades
                 this.otrasSenasField = value;
             }
         }
+
+        #endregion
     }
 }

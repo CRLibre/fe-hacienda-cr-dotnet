@@ -5,7 +5,9 @@ using System.Text;
 
 namespace CRLibre.FE.Entidades
 {
-    /// <remarks/>
+    /// <summary>
+    /// Emisor del documento
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.7.2558.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -13,6 +15,8 @@ namespace CRLibre.FE.Entidades
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/facturaElectronica")]
     public class EmisorType
     {
+
+        #region Variables
 
         private string nombreField;
 
@@ -28,12 +32,18 @@ namespace CRLibre.FE.Entidades
 
         private string correoElectronicoField;
 
-        /// <remarks/>
+        #endregion
+
+        /// <summary>
+        /// Nombre o razon social 
+        ///  | [REQUERIDO]
+        /// <remarks>80 caracteres máximo</remarks>
+        /// </summary>
         public string Nombre
         {
             get
             {
-                return this.nombreField;
+                return this.nombreField.Substring(0,80);
             }
             set
             {
@@ -54,12 +64,16 @@ namespace CRLibre.FE.Entidades
             }
         }
 
-        /// <remarks/>
+        /// <summary>
+        /// En caso de que se cuente con nombre comercial debe indicarse
+        /// ///  | [OPCIONAL]
+        /// <remarks>80 caracteres máximo</remarks>  
+        /// </summary>
         public string NombreComercial
         {
             get
             {
-                return this.nombreComercialField;
+                return this.nombreComercialField.Substring(0,80);
             }
             set
             {

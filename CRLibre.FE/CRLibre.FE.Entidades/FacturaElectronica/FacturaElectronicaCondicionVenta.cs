@@ -5,39 +5,55 @@ using System.Text;
 
 namespace CRLibre.FE.Entidades
 {
-    /// <remarks/>
+    /// <summary>
+    /// Condiciones de la venta
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.7.2558.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "https://tribunet.hacienda.go.cr/docs/esquemas/2017/v4.2/facturaElectronica")]
     public enum FacturaElectronicaCondicionVenta
     {
 
-        /// <remarks/>
+        /// <summary>
+        /// Contado
+        /// </summary>
         [System.Xml.Serialization.XmlEnumAttribute("01")]
-        Item01,
+        Contado,
 
-        /// <remarks/>
+        /// <summary>
+        /// Crédito
+        /// </summary>
         [System.Xml.Serialization.XmlEnumAttribute("02")]
-        Item02,
+        Crédito,
 
-        /// <remarks/>
+        /// <summary>
+        /// Consignación
+        /// </summary>
         [System.Xml.Serialization.XmlEnumAttribute("03")]
-        Item03,
+        Consignación,
 
-        /// <remarks/>
+        /// <summary>
+        /// Apartado
+        /// </summary>
         [System.Xml.Serialization.XmlEnumAttribute("04")]
-        Item04,
+        Apartado,
 
-        /// <remarks/>
+        /// <summary>
+        /// Arrendamiento con opción de compra
+        /// </summary>
         [System.Xml.Serialization.XmlEnumAttribute("05")]
-        Item05,
+        Arrendamiento_con_opción_de_compra,
 
-        /// <remarks/>
+        /// <summary>
+        /// Arrendamiento en función financiera
+        /// </summary>
         [System.Xml.Serialization.XmlEnumAttribute("06")]
-        Item06,
+        Arrendamiento_en_función_financiera,
 
-        /// <remarks/>
+        /// <summary>
+        /// Otros
+        /// </summary>
         [System.Xml.Serialization.XmlEnumAttribute("99")]
-        Item99,
+        Otros,
     }
 }
