@@ -42,5 +42,19 @@
     <Compile Include="CertificadoLogicaNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CRLibre.FE.AccesoDatos.SQLite\CRLibre.FE.AccesoDatos.SQLite.csproj">
+      <Project>{147f7711-4bbb-4d85-8e1a-1aadeae230ac}</Project>
+      <Name>CRLibre.FE.AccesoDatos.SQLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CRLibre.FE.Entidades\CRLibre.FE.Entidades.csproj">
+      <Project>{77a10cb8-f3f2-463c-b620-a8b959550643}</Project>
+      <Name>CRLibre.FE.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CRLibre.FE.WebServices\CRLibre.FE.WebServices.csproj">
+      <Project>{c967b61a-e83b-46f0-8fa5-30e59c27b948}</Project>
+      <Name>CRLibre.FE.WebServices</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
