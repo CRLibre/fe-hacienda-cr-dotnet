@@ -39,7 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Certificado.cs" />
     <Compile Include="CodigoType.cs" />
+    <Compile Include="Clave.cs" />
+    <Compile Include="ComprobanteElectronico.cs" />
     <Compile Include="EmisorType.cs" />
     <Compile Include="ExoneracionType.cs" />
     <Compile Include="FacturaElectronica\FacturaElectronica.cs">

@@ -103,5 +103,10 @@ namespace CRLibre.FE.Presentacion
 
             MessageBox.Show("El certificado fue leido con exito");
         }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

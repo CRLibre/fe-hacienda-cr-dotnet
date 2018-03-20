@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmGenerarFacturaElectronica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenerarFacturaElectronica.Designer.cs">
+      <DependentUpon>frmGenerarFacturaElectronica.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -52,6 +58,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmGenerarFacturaElectronica.resx">
+      <DependentUpon>frmGenerarFacturaElectronica.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -77,6 +86,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CRLibre.FE.Entidades\CRLibre.FE.Entidades.csproj">
+      <Project>{77a10cb8-f3f2-463c-b620-a8b959550643}</Project>
+      <Name>CRLibre.FE.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CRLibre.FE.LogicaNegocio\CRLibre.FE.LogicaNegocio.csproj">
+      <Project>{df40f0d2-f3cd-4388-9fb7-f2c6afd83445}</Project>
+      <Name>CRLibre.FE.LogicaNegocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

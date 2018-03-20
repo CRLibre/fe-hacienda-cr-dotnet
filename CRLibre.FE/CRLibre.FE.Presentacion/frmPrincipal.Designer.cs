@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.dgvCertificados = new System.Windows.Forms.TabPage();
+            this.lblDatosCertificado = new System.Windows.Forms.Label();
             this.txtPasswordContibuynete = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtIdentificacionContribuyente = new System.Windows.Forms.TextBox();
@@ -37,16 +38,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtUbicacionCertificadoDigital = new System.Windows.Forms.TextBox();
             this.btnSeleccionarCertificado = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.colNombreCertificado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.lblDatosCertificado = new System.Windows.Forms.Label();
+            this.btnGenerarFE = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.dgvCertificados.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -72,7 +71,6 @@
             this.dgvCertificados.Controls.Add(this.label3);
             this.dgvCertificados.Controls.Add(this.txtUbicacionCertificadoDigital);
             this.dgvCertificados.Controls.Add(this.btnSeleccionarCertificado);
-            this.dgvCertificados.Controls.Add(this.dataGridView1);
             this.dgvCertificados.Controls.Add(this.label2);
             this.dgvCertificados.Controls.Add(this.label1);
             this.dgvCertificados.Location = new System.Drawing.Point(4, 22);
@@ -82,6 +80,19 @@
             this.dgvCertificados.TabIndex = 0;
             this.dgvCertificados.Text = "Paso 1. Cargar certificado";
             this.dgvCertificados.UseVisualStyleBackColor = true;
+            // 
+            // lblDatosCertificado
+            // 
+            this.lblDatosCertificado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDatosCertificado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblDatosCertificado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblDatosCertificado.Location = new System.Drawing.Point(25, 231);
+            this.lblDatosCertificado.Name = "lblDatosCertificado";
+            this.lblDatosCertificado.Size = new System.Drawing.Size(987, 292);
+            this.lblDatosCertificado.TabIndex = 10;
+            this.lblDatosCertificado.Text = "Datos del certificado:";
             // 
             // txtPasswordContibuynete
             // 
@@ -145,25 +156,6 @@
             this.btnSeleccionarCertificado.UseVisualStyleBackColor = true;
             this.btnSeleccionarCertificado.Click += new System.EventHandler(this.btnSeleccionarCertificado_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colNombreCertificado});
-            this.dataGridView1.Location = new System.Drawing.Point(585, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(427, 154);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // colNombreCertificado
-            // 
-            this.colNombreCertificado.HeaderText = "Nombre";
-            this.colNombreCertificado.Name = "colNombreCertificado";
-            this.colNombreCertificado.ReadOnly = true;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -185,13 +177,15 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnGenerarFE);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(925, 315);
+            this.tabPage2.Size = new System.Drawing.Size(1021, 534);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Paso 2. Capturar datos";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // btnCerrar
             // 
@@ -205,18 +199,14 @@
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // lblDatosCertificado
+            // btnGenerarFE
             // 
-            this.lblDatosCertificado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDatosCertificado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblDatosCertificado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblDatosCertificado.Location = new System.Drawing.Point(25, 231);
-            this.lblDatosCertificado.Name = "lblDatosCertificado";
-            this.lblDatosCertificado.Size = new System.Drawing.Size(987, 292);
-            this.lblDatosCertificado.TabIndex = 10;
-            this.lblDatosCertificado.Text = "Datos del certificado:";
+            this.btnGenerarFE.Location = new System.Drawing.Point(51, 38);
+            this.btnGenerarFE.Name = "btnGenerarFE";
+            this.btnGenerarFE.Size = new System.Drawing.Size(104, 40);
+            this.btnGenerarFE.TabIndex = 0;
+            this.btnGenerarFE.Text = "Generar Factura electronica";
+            this.btnGenerarFE.UseVisualStyleBackColor = true;
             // 
             // frmPrincipal
             // 
@@ -231,7 +221,7 @@
             this.tabControl1.ResumeLayout(false);
             this.dgvCertificados.ResumeLayout(false);
             this.dgvCertificados.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -242,7 +232,6 @@
         private System.Windows.Forms.TabPage dgvCertificados;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPasswordContibuynete;
@@ -252,8 +241,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtUbicacionCertificadoDigital;
         private System.Windows.Forms.Button btnSeleccionarCertificado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNombreCertificado;
         private System.Windows.Forms.Label lblDatosCertificado;
+        private System.Windows.Forms.Button btnGenerarFE;
     }
 }
 
