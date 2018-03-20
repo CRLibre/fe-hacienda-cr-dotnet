@@ -41,8 +41,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.btnGenerarFE = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.dgvCertificados.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -100,7 +100,6 @@
             this.txtPasswordContibuynete.Name = "txtPasswordContibuynete";
             this.txtPasswordContibuynete.Size = new System.Drawing.Size(256, 20);
             this.txtPasswordContibuynete.TabIndex = 9;
-            this.txtPasswordContibuynete.Text = "8204";
             this.txtPasswordContibuynete.UseSystemPasswordChar = true;
             // 
             // label5
@@ -118,7 +117,6 @@
             this.txtIdentificacionContribuyente.Name = "txtIdentificacionContribuyente";
             this.txtIdentificacionContribuyente.Size = new System.Drawing.Size(256, 20);
             this.txtIdentificacionContribuyente.TabIndex = 7;
-            this.txtIdentificacionContribuyente.Text = "205930122";
             // 
             // label4
             // 
@@ -187,6 +185,15 @@
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
+            // btnGenerarFE
+            // 
+            this.btnGenerarFE.Location = new System.Drawing.Point(51, 38);
+            this.btnGenerarFE.Name = "btnGenerarFE";
+            this.btnGenerarFE.Size = new System.Drawing.Size(104, 40);
+            this.btnGenerarFE.TabIndex = 0;
+            this.btnGenerarFE.Text = "Generar Factura electronica";
+            this.btnGenerarFE.UseVisualStyleBackColor = true;
+            // 
             // btnCerrar
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -198,15 +205,6 @@
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // btnGenerarFE
-            // 
-            this.btnGenerarFE.Location = new System.Drawing.Point(51, 38);
-            this.btnGenerarFE.Name = "btnGenerarFE";
-            this.btnGenerarFE.Size = new System.Drawing.Size(104, 40);
-            this.btnGenerarFE.TabIndex = 0;
-            this.btnGenerarFE.Text = "Generar Factura electronica";
-            this.btnGenerarFE.UseVisualStyleBackColor = true;
             // 
             // frmPrincipal
             // 
