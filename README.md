@@ -24,37 +24,41 @@ Ver archivo [CONTRIBUTING.md](CONTRIBUTING.md) para más información
 ## Sobre este Connector
 Este conector está en ASP.NET MVC, la idea es realizar una aplicación que pueda interactuar con el 
 [API de CRLibre]( https://github.com/CRLibre/API_Hacienda) , por medio de un conector.
+
 En la aplicación se encuentra un archivo en CRLibre/web.config donde encontraremos una variable “ApiServer”  <add key="ApiServer" value="http://localhost:81/api.php" /> , en esta se debe escribir la URL de donde se encuentra el API.
+
 Se creo una clase /CRLibre/Models/ApiConnect.cs que es el conector con el API al lado servidor de nuestra aplicación.
-•	En la función PostApi() enviamos 3 parámetros los cuales son:
-o	Dictionary<string, string> values (Los datos que se deseen enviar)
-o	string module (Nombre del módulo del API = “w”)
-o	string action  (Nombre de la acción del módulo = “r” )
-##Ejemplo de uso del conector
-//Se importa models en el casos de usar fuera de Models
-using CRLibre.Models;
-//Codigo...
-.......
-bool isAuthenticated = false;
-string sessionKey = "";
-try
-{
-    //Se crea un directorio de parámetros
-    var values = new Dictionary<string, string>
+
+*	En la función PostApi() enviamos 3 parámetros los cuales son:
+  *	Dictionary<string, string> values (Los datos que se deseen enviar)
+  *	string module (Nombre del módulo del API = “w”)
+  *	string action  (Nombre de la acción del módulo = “r” )
+## Ejemplo de uso del conector
+
+    //Se importa models en el casos de usar fuera de Models
+    using CRLibre.Models;
+    //Codigo...
+    .......
+    bool isAuthenticated = false;
+    string sessionKey = "";
+    try
     {
-        { "userName", username },
-        { "pwd", password }
-    };
-    //Se instancia la clase
-    ApiConnect api = new ApiConnect();
-    //Se llama la la funcion PostApi y se envian los parametros
-    JToken jObjet = api.PostApi(values,"users", "users_log_me_in");
-    //Se obtiene el objeto deseado
-    sessionKey = (string)jObjet["sessionKey"];
-    isAuthenticated = true;
-}
-catch (Exception e)
-{
-    //Normalmente ocurre error al no encontrar el objeto. se puede hacer un control más adecuado según sea necesario.
-    return new AuthenticationResult("El usuario o la contraseña son incorrectos");
-}
+        //Se crea un directorio de parámetros
+        var values = new Dictionary<string, string>
+        {
+            { "userName", username },
+            { "pwd", password }
+        };
+        //Se instancia la clase
+        ApiConnect api = new ApiConnect();
+        //Se llama la la funcion PostApi y se envian los parametros
+        JToken jObjet = api.PostApi(values,"users", "users_log_me_in");
+        //Se obtiene el objeto deseado
+        sessionKey = (string)jObjet["sessionKey"];
+        isAuthenticated = true;
+    }
+    catch (Exception e)
+    {
+        //Normalmente ocurre error al no encontrar el objeto. se puede hacer un control más adecuado según sea necesario.
+        return new AuthenticationResult("El usuario o la contraseña son incorrectos");
+    }
