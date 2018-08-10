@@ -1,0 +1,107 @@
+﻿@model CRLibre.Models.User
+
+@{
+    ViewBag.Title = "Mi Cuenta";
+}
+
+<h2>@ViewBag.Title</h2>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">
+            @Html.DisplayFor(model => model.fullName)
+        </h5>
+        <hr />
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.userName)
+                    @Html.EditorFor(model => model.userName, new { htmlAttributes = new { @class = "form-control form-control-sm", @readonly = "readonly", @placeholder = "Escribe un nombre" } })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.status)
+                    @Html.DropDownListFor(m => m.status,
+         new SelectList(
+            new[]
+            {
+                new { Value = "0", Text = "Inactivo" },
+                new { Value = "1", Text = "Activo" },
+            },
+            "Value",
+            "Text",
+            Model
+        ),new { @class = "form-control form-control-sm", @readonly = "readonly", @disabled = "disabled" })
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.email)
+                    @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control form-control-sm", @readonly = "readonly", @placeholder = "Escribe un nombre" } })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.country)
+                    @Html.EditorFor(model => model.country, new { htmlAttributes = new { @class = "form-control form-control-sm", @readonly = "readonly", @placeholder = "Escribe un nombre" } })
+                </div>
+            </div>
+        </div>
+        @Html.ActionLink("Editar", "Edit", new { id = Model.idUser }, new { @class = "btn btn-primary" })
+    </div>
+</div>
+<div>
+    <dl class="dl-horizontal">
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.about)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.about)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lastAccess)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastAccess)
+
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.avatar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.avatar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.settings)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.settings)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    
+</p>

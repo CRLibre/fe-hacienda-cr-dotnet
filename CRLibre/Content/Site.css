@@ -1,0 +1,13 @@
+﻿:root {
+    --vitechd-blue: #007bff;
+    --vitechd-gay: #3f3f3f;
+}
+.bg-blue-vitechd {
+    background-color: #007bff;
+}
+.bg-gray-vitechd {
+    background-color: #3f3f3f;
+}
+.content-wrapper{
+    background-color:ghostwhite;
+}

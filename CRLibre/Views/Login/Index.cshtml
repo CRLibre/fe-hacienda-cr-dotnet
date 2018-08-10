@@ -1,0 +1,28 @@
+﻿@model CRLibre.Models.Login
+@{
+    ViewBag.Title = "Login";
+}
+    <div class="col offset-3 col-md-4 col-sm-12">
+        <div class="col col-sm-12">
+            <img src="@Href("~/Images/cropped-CRLibre-Logo_15-1.png")" class="img-fluid" alt="Logo">
+        </div>
+        @using (Html.BeginForm("Index", "Login", FormMethod.Post, new { role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <label for="userName">Usuario</label>
+            @Html.TextBoxFor(model => model.userName, new { @class = "form-control", @placeholder = "Usuario" })
+            @Html.ValidationMessageFor(model => model.userName, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="pwd">Contraseña</label>
+            @Html.PasswordFor(model => model.pwd, new { @class = "form-control", @placeholder = "Contraseña" })
+            @Html.ValidationMessageFor(model => model.pwd, "", new { @class = "text-danger" })
+        </div>
+        <button type="submit" class="btn btn-primary">Iniciar</button>
+}
+    </div>
+    
+
+
